@@ -163,6 +163,9 @@
               width: auto;
             }
             .radio-list-item input[type=radio] {
+              border-style: none;
+              border-width: 0 0 0 0!;
+              margin: 0;
               display: none;
             }
             .radio-list-img {
@@ -659,27 +662,27 @@
                             Black pieces<br/>
                             <div class="radio-list-item">
                               <input id="piece-style-black-simple" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_simple_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('simple')"/>
+                              <img src="images/pieces/black_simple_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('simple')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-jade" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_jade_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('jade')"/>
+                              <img src="images/pieces/black_jade_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('jade')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-bluemarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_bluemarble_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('bluemarble')"/>
+                              <img src="images/pieces/black_bluemarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('bluemarble')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-brownmarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_brownmarble_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('brownmarble')"/>
+                              <img src="images/pieces/black_brownmarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('brownmarble')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-redmarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_redmarble_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('redmarble')"/>
+                              <img src="images/pieces/black_redmarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('redmarble')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-pietersite" type="radio" name="piece-style"/>
-                              <img src="images/pieces/black_pietersite_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleBlack('pietersite')"/>
+                              <img src="images/pieces/black_pietersite_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('pietersite')"/>
                             </div>
                           </form><br/>
                           <form>
@@ -908,14 +911,20 @@
             var stack_selection_height = 60;
             var border_size = 30;
             var letter_size = 12;
+            var table_width = 1280;
+            var table_depth = 920;
+            var table_height = 50;
             var digit_adjustment = 2;
+            var light_position = [0, 400, -45];
             var diagonal_walls = false;
+            var render_light = false;
             var white_square_tex_name = 'images/board/white_simple.png';
             var black_square_tex_name = 'images/board/black_simple.png';
             var white_piece_tex_name = 'images/pieces/white_simple_pieces.png';
             var black_piece_tex_name = 'images/pieces/black_simple_pieces.png';
             var white_caps_tex_name = 'images/pieces/white_simple_caps.png';
             var black_caps_tex_name = 'images/pieces/black_simple_caps.png';
+            var table_tex_name = 'images/wooden_table.png';
 
             var raycaster = new THREE.Raycaster();
             var highlighter;
@@ -993,6 +1002,8 @@
                         }
                     }
                     
+                    this.addtable();
+                    this.addlight()
                     this.addboard();
                     this.addpieces();
 
@@ -1005,12 +1016,40 @@
                     if (this.mycolor !== this.boardside)
                         this.reverseboard();
                 },
+                addtable: function() {
+                    var table_texture = THREE.ImageUtils.loadTexture(table_tex_name);
+                    var table_material = new THREE.MeshLambertMaterial({map: table_texture});
+                    table_material.magFilter = THREE.LinearFilter;
+                    table_material.minFilter = THREE.LinearMipMapFilter;
+                    table_material.anisotropy = 1;
+                    var geometry = new THREE.BoxGeometry(table_width, table_height, table_depth);
+                    var table = new THREE.Mesh(geometry, table_material);
+                    table.position.set(0, -(table_height + sq_height) / 2, -sq_size / 2);
+                    scene.add(table);
+                },
+                addlight: function() {
+                    var light = new THREE.PointLight(0xAAAAAA, 2, 1200);
+                    light.position.x = light_position[0];
+                    light.position.y = light_position[1];
+                    light.position.z = light_position[2];
+                    scene.add(light);
+                    var hemisphereLight = new THREE.HemisphereLight( 0xFFFFFF, 0xFFFFFF, 0.6);
+                    hemisphereLight.color.setHSL(0.15, 0.1, 0.5);
+                    hemisphereLight.groundColor.setHSL(0.1, 0.8, 1);
+                    scene.add(hemisphereLight);
+                },
                 addboard: function () {
                     var white_texture = THREE.ImageUtils.loadTexture(white_square_tex_name);
                     var black_texture = THREE.ImageUtils.loadTexture(black_square_tex_name);
                     
-                    var white_material = new THREE.MeshBasicMaterial({map: white_texture});
-                    var black_material = new THREE.MeshBasicMaterial({map: black_texture});
+                    var white_material = new THREE.MeshLambertMaterial({map: white_texture});
+                    var black_material = new THREE.MeshLambertMaterial({map: black_texture});
+                    white_material.magFilter = THREE.LinearFilter;
+                    white_material.minFilter = THREE.LinearMipMapFilter;
+                    white_material.anisotropy = renderer.getMaxAnisotropy();
+                    black_material.magFilter = THREE.LinearFilter;
+                    black_material.minFilter = THREE.LinearMipMapFilter;
+                    black_material.anisotropy = renderer.getMaxAnisotropy();
 
                     var geometry = new THREE.BoxGeometry(sq_size, sq_height, sq_size);
                     geometry.center();
@@ -1038,7 +1077,7 @@
                         }
                     }
 
-                    var border_material = new THREE.MeshBasicMaterial({color: 0x6f4734});
+                    var border_material = new THREE.MeshLambertMaterial({color: 0x6f4734});
                     geometry = new THREE.BoxGeometry(this.size * sq_size + 2 * border_size, piece_height, border_size);
 
                     var border = new THREE.Mesh(geometry, border_material);
@@ -1061,7 +1100,7 @@
                     border.position.set(this.position.endx - border_size, 0, -sq_size / 2);
                     scene.add(border);
 
-                    var material = new THREE.MeshBasicMaterial({color: 0xFFF5B5});
+                    var material = new THREE.MeshLambertMaterial({color: 0xFFF5B5});
                     for (var i = 0; i < this.size; i++) {
                         geometry = new THREE.TextGeometry(String.fromCharCode('A'.charCodeAt(0) + i),
                                 {size: letter_size, height: 1, font: 'helvetiker', weight: 'normal'});
@@ -1111,10 +1150,22 @@
                     var white_cap_texture = THREE.ImageUtils.loadTexture(white_caps_tex_name);
                     var black_cap_texture = THREE.ImageUtils.loadTexture(black_caps_tex_name);
                     
-                    var white_material = new THREE.MeshBasicMaterial({map: white_texture});
-                    var black_material = new THREE.MeshBasicMaterial({map: black_texture});
-                    var white_cap_material = new THREE.MeshBasicMaterial({map: white_cap_texture});
-                    var black_cap_material = new THREE.MeshBasicMaterial({map: black_cap_texture});
+                    var white_material = new THREE.MeshLambertMaterial({map: white_texture});
+                    var black_material = new THREE.MeshLambertMaterial({map: black_texture});
+                    var white_cap_material = new THREE.MeshLambertMaterial({map: white_cap_texture});
+                    var black_cap_material = new THREE.MeshLambertMaterial({map: black_cap_texture});
+                    white_material.magFilter = THREE.LinearFilter;
+                    white_material.minFilter = THREE.LinearMipMapFilter;
+                    white_material.anisotropy = 1;
+                    black_material.magFilter = THREE.LinearFilter;
+                    black_material.minFilter = THREE.LinearMipMapFilter;
+                    black_material.anisotropy = 1;
+                    white_cap_material.magFilter = THREE.LinearFilter;
+                    white_cap_material.minFilter = THREE.LinearMipMapFilter;
+                    white_cap_material.anisotropy = 1;
+                    black_cap_material.magFilter = THREE.LinearFilter;
+                    black_cap_material.minFilter = THREE.LinearMipMapFilter;
+                    black_cap_material.anisotropy = 1;
 
                     var geometry = new THREE.BoxGeometry(piece_size, piece_height, piece_size);
                     geometry.center();
@@ -1153,7 +1204,7 @@
                                 capstone_radius, capstone_height, 30);
                         geometry.center();
                         var piece = new THREE.Mesh(geometry, white_cap_material);
-                        piece.position.set(this.position.endx + 50, capstone_height / 2, this.position.endz - piece_size - stackno * stack_dist);
+                        piece.position.set(this.position.endx + 50, (capstone_height - sq_height) / 2, this.position.endz - piece_size - stackno * stack_dist);
                         piece.iswhitepiece = true;
                         piece.isstanding = true;
                         piece.onsquare = null;
@@ -1164,7 +1215,7 @@
                         scene.add(piece);
 
                         piece = new THREE.Mesh(geometry, black_cap_material);
-                        piece.position.set(this.position.x - 50 - piece_size, capstone_height / 2, this.position.z + stackno * stack_dist);
+                        piece.position.set(this.position.x - 50 - piece_size, (capstone_height - sq_height) / 2, this.position.z + stackno * stack_dist);
                         piece.iswhitepiece = false;
                         piece.isstanding = true;
                         piece.onsquare = null;
@@ -1180,8 +1231,15 @@
                     var white_texture = THREE.ImageUtils.loadTexture(white_square_tex_name);
                     var black_texture = THREE.ImageUtils.loadTexture(black_square_tex_name);
                     
-                    var white_material = new THREE.MeshBasicMaterial({map: white_texture});
-                    var black_material = new THREE.MeshBasicMaterial({map: black_texture});
+                    var white_material = new THREE.MeshLambertMaterial({map: white_texture});
+                    var black_material = new THREE.MeshLambertMaterial({map: black_texture});
+                    white_material.magFilter = THREE.LinearFilter;
+                    white_material.minFilter = THREE.LinearMipMapFilter;
+                    white_material.anisotropy = renderer.getMaxAnisotropy();
+                    white_material.needsupdate = true;
+                    black_material.magFilter = THREE.LinearFilter;
+                    black_material.minFilter = THREE.LinearMipMapFilter;
+                    black_material.anisotropy = renderer.getMaxAnisotropy();
                     
                     // the first size^2 board_pieces are the squares.
                     var fields = this.size * this.size;
@@ -1200,10 +1258,22 @@
                     var white_cap_texture = THREE.ImageUtils.loadTexture(white_caps_tex_name);
                     var black_cap_texture = THREE.ImageUtils.loadTexture(black_caps_tex_name);
                     
-                    var white_material = new THREE.MeshBasicMaterial({map: white_texture});
-                    var black_material = new THREE.MeshBasicMaterial({map: black_texture});
-                    var white_cap_material = new THREE.MeshBasicMaterial({map: white_cap_texture});
-                    var black_cap_material = new THREE.MeshBasicMaterial({map: black_cap_texture});
+                    var white_material = new THREE.MeshLambertMaterial({map: white_texture});
+                    var black_material = new THREE.MeshLambertMaterial({map: black_texture});
+                    var white_cap_material = new THREE.MeshLambertMaterial({map: white_cap_texture});
+                    var black_cap_material = new THREE.MeshLambertMaterial({map: black_cap_texture});
+                    white_material.magFilter = THREE.LinearFilter;
+                    white_material.minFilter = THREE.LinearMipMapFilter;
+                    white_material.anisotropy = 1;
+                    black_material.magFilter = THREE.LinearFilter;
+                    black_material.minFilter = THREE.LinearMipMapFilter;
+                    black_material.anisotropy = 1;
+                    white_cap_material.magFilter = THREE.LinearFilter;
+                    white_cap_material.minFilter = THREE.LinearMipMapFilter;
+                    white_cap_material.anisotropy = 1;
+                    black_cap_material.magFilter = THREE.LinearFilter;
+                    black_cap_material.minFilter = THREE.LinearMipMapFilter;
+                    black_cap_material.anisotropy = 1;
                     
                     var geometry = new THREE.BoxGeometry(piece_size, piece_height, piece_size);
                     var old_size = this.piece_objects[0].geometry.parameters.width;
