@@ -918,6 +918,7 @@
             var light_position = [0, 400, -45];
             var diagonal_walls = false;
             var render_light = false;
+            var piece_geometry;
             var white_square_tex_name = 'images/board/white_simple.png';
             var black_square_tex_name = 'images/board/black_simple.png';
             var white_piece_tex_name = 'images/pieces/white_simple_pieces.png';
@@ -2165,7 +2166,7 @@
                         return;
                     }
                     var url = window.location.host;
-                    if (url.indexOf("playtak") > -1)
+                    //if (url.indexOf("playtak") > -1)
                         url = 'playtak.com:3000';
                     var proto='ws://';
                     if (window.location.protocol === "https:")
@@ -2495,10 +2496,19 @@
                         alert("danger", "Server says: "+msg);
                     }
                     else if (e.startsWith("Shout")) {
-                        var msg = e.split("Shout ");
-                        var name = msg[1].split('<')[1].split('>')[0];
-                        var txt = msg[1].split('<'+name+'>')[1];
-                        txt = txt.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                        var msg = e.replace(/Shout\s/, "");
+                        var name = msg.split('<')[1].split('>')[0];
+                        var txt = msg.split('<'+name+'>')[1];
+                        var viaIRC = false;
+                        if (name=='IRC')
+                        {
+                          msg = txt;
+                          name = msg.split('<')[1].split('>')[0];
+                          txt = msg.split('<'+name+'>')[1];
+                          viaIRC = true;
+                        }
+                        
+                        txt = txt.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace();
 
                         var $cs = $('#chat-server');
 
@@ -2509,9 +2519,15 @@
                         if (localStorage.getItem('hide-chat-time')==='true') {
                           cls = cls + ' hidden';
                         }
-                        $cs.append('<span class="'+cls+'">['+getZero(hours)+':'+getZero(mins)+'] </span>');
-                        $cs.append('<span class="chatname">'+name+':</span>');
-                        $cs.append(txt+'<br>');
+                        $cs.append('<span class="' + cls + '">[' + getZero(hours) + ':' + getZero(mins) + '] </span>');
+                        $cs.append('<span class="chatname"' + (viaIRC ? ' style="color:#33d;"' : '')
+                            + '>' + name + ':</span>');
+                        if (txt.trim().toLowerCase()=='tak')
+                        {
+                          $cs.append('<span style="color:#f50;font-weight:bold;">Tak!</span><br>');
+                        } else {
+                          $cs.append(txt+'<br>');
+                        }
                         $cs.scrollTop($cs[0].scrollHeight);
                     }
                     //new seek
@@ -2628,6 +2644,9 @@
                 // load the user settings.
                 loadSettings();
                 
+                // construct geometries.
+                constructGeometries();
+                
                 canvas = document.getElementById("gamecanvas");
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
@@ -2659,6 +2678,7 @@
 
                 var material = new THREE.LineBasicMaterial({color: 0x0000f0});
                 var geometry = new THREE.TorusGeometry(sq_size / 2 + 5, 3, 16, 100);
+                
                 //geometry.vertices.shift();
                 highlighter = new THREE.Mesh(geometry, material);
                 highlighter.rotateX(Math.PI / 2);
@@ -2849,6 +2869,11 @@
 
             function getZero(t) {
               return t<10?'0'+t:t;
+            }
+            
+            function constructGeometries()
+            {
+              //piece_geometry = 
             }
             
             /**
