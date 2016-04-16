@@ -121,6 +121,9 @@
               padding-bottom: 10px;
               vertical-align: top;
             }
+            .split-container-left form {
+              margin: 8px 0 0 0; 
+            }
             .split-container-right {
               display: inline-block;
               overflow: hidden;
@@ -129,6 +132,9 @@
               padding-bottom: 10px;
               border-left: 1px solid #ddd;
               vertical-align: top;
+            }
+            .split-container-right form {
+              margin: 8px 0 0 0; 
             }
             input[type=checkbox] {
               vertical-align: middle;
@@ -170,11 +176,13 @@
             }
             .radio-list-img {
               margin: 0;
+              width: 56px;
+              height: 56px;
               border: 2px #fff solid;
               cursor: pointer;
             }
             .radio-list-item input[type=radio]:checked + .radio-list-img {
-              border: 2px #88d solid;
+              border: 2px #f83 solid;
             }
             .width-full {
                 margin: 0 auto;
@@ -353,7 +361,7 @@
                                 <li><a href="#" onclick="scratchbutton(8);">8x8</a></li>
                             </ul>
                         </li>
-                        <!--<li><a  class="visible-xs-block" title="Reverse view" class="hidden-xs" href="#" onclick="board.reverseboard()">Flip view</a></li>-->
+                        <!--<li><a  class="visible-xs-block" title="Reverse view" class="hidden-xs" href="#" onclick="board.reverseboard(true)">Flip view</a></li>-->
                         <li><a id="loadtps" href="#" onclick="loadtpn()">Load TPS</a></li>
                         <li>
                           <a id="creategame" href="#" title="Create online game" onclick="$('#creategamemodal').modal('show')">New Game</a>
@@ -421,7 +429,7 @@
                     <div id="player-opp-time" class="player1-time">0:00</div>
                 </li>
                 <li class="center">
-                    <!--<a href="#" title="Reverse board" onclick="board.reverseboard()"><img src="images/ic_screen_rotation_black_24px.svg" width="25 height=25"></a>-->
+                    <!--<a href="#" title="Reverse board" onclick="board.reverseboard(true)"><img src="images/ic_screen_rotation_black_24px.svg" width="25 height=25"></a>-->
                     <a href="#" title="Offer/Accept draw" class="btn" onclick="server.draw()"><img id="draw" src="images/offer-hand.png" width="25" height="25"></a>
                     <a href="#" title="Resign" class="btn" onclick="server.resign()"><img src="images/flag.svg" width="25" height="20"></a>
                 </li>
@@ -630,138 +638,137 @@
                         <div class="split-container-left">
                           <p>
                             <b>
-                              Board and Pieces
+                              Styles
                             </b>
                             <br/>
                           </p>
                           <form>
-                            <input id="wall-orientation" type="checkbox" onClick="checkboxDiagonalWalls()"/>
-                            Diagonal walls
-                          </form><br/>
-                          <form>
-                            Piece size
-                            <input id="piece-size-slider" type="range" value="80" step="2" min="60" max="88" oninput="sliderPieceSize(this.value)" onChange="board.updatepieces()"/> 
-                            <span id="piece-size-display">88</span>
-                          </form><br/>
-                          <form>
                             White pieces<br/>
                             <div class="radio-list-item">
                               <input id="piece-style-white-simple" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/white_simple_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleWhite('simple')"/>
+                              <img src="images/pieces/white_simple_pieces.png" class="radio-list-img" onClick="radioPieceStyleWhite('simple')"/>
                             </div>
                             <div class="radio-list-item">
-                              <input id="piece-style-white-coral" type="radio" name="piece-style"/>
-                              <img src="images/pieces/white_coral_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleWhite('coral')"/>
+                              <input id="piece-style-white-lightwood" type="radio" name="piece-style" checked/>
+                              <img src="images/pieces/white_lightwood_pieces.png" class="radio-list-img" onClick="radioPieceStyleWhite('lightwood')"/>
+                            </div>
+                            <div class="radio-list-item">
+                              <input id="piece-style-white-chipped" type="radio" name="piece-style" checked/>
+                              <img src="images/pieces/white_chipped_pieces.png" class="radio-list-img" onClick="radioPieceStyleWhite('chipped')"/>
+                            </div>
+                            <div class="radio-list-item">
+                              <input id="piece-style-white-whitemarble" type="radio" name="piece-style"/>
+                              <img src="images/pieces/white_whitemarble_pieces.png" class="radio-list-img" onClick="radioPieceStyleWhite('whitemarble')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-white-bone" type="radio" name="piece-style"/>
-                              <img src="images/pieces/white_bone_pieces.png" class="radio-list-img" height="50" width="50" onClick="radioPieceStyleWhite('bone')"/>
+                              <img src="images/pieces/white_bone_pieces.png" class="radio-list-img" onClick="radioPieceStyleWhite('bone')"/>
                             </div>
-                          </form><br/>
+                          </form>
                           <form>
                             Black pieces<br/>
                             <div class="radio-list-item">
                               <input id="piece-style-black-simple" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_simple_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('simple')"/>
+                              <img src="images/pieces/black_simple_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('simple')"/>
                             </div>
                             <div class="radio-list-item">
-                              <input id="piece-style-black-jade" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_jade_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('jade')"/>
+                              <input id="piece-style-black-livingwood" type="radio" name="piece-style" checked/>
+                              <img src="images/pieces/black_livingwood_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('livingwood')"/>
                             </div>
                             <div class="radio-list-item">
-                              <input id="piece-style-black-bluemarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_bluemarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('bluemarble')"/>
+                              <input id="piece-style-black-wood" type="radio" name="piece-style"/>
+                              <img src="images/pieces/black_wood_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('wood')"/>
                             </div>
                             <div class="radio-list-item">
-                              <input id="piece-style-black-brownmarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_brownmarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('brownmarble')"/>
-                            </div>
-                            <div class="radio-list-item">
-                              <input id="piece-style-black-redmarble" type="radio" name="piece-style" checked/>
-                              <img src="images/pieces/black_redmarble_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('redmarble')"/>
+                              <input id="piece-style-black-blackwood" type="radio" name="piece-style"/>
+                              <img src="images/pieces/black_blackwood_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('blackwood')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="piece-style-black-pietersite" type="radio" name="piece-style"/>
-                              <img src="images/pieces/black_pietersite_pieces.png" class="radio-list-img" height="54" width="54" onClick="radioPieceStyleBlack('pietersite')"/>
+                              <img src="images/pieces/black_pietersite_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('pietersite')"/>
                             </div>
-                          </form><br/>
+                            <div class="radio-list-item">
+                              <input id="piece-style-black-bluemarble" type="radio" name="piece-style"/>
+                              <img src="images/pieces/black_bluemarble_pieces.png" class="radio-list-img" onClick="radioPieceStyleBlack('bluemarble')"/>
+                            </div>
+                          </form>
                           <form>
                             White squares<br/>
                             <div class="radio-list-item">
                               <input id="board-style-white-simple" type="radio" name="board-style" checked/>
-                              <img src="images/board/white_simple.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('simple')"/>
+                              <img src="images/board/white_simple.png" class="radio-list-img" onClick="radioBoardStyleWhite('simple')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-white-velvet" type="radio" name="board-style" checked/>
-                              <img src="images/board/white_white-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('white-velvet')"/>
+                              <img src="images/board/white_white-velvet.png" class="radio-list-img" onClick="radioBoardStyleWhite('white-velvet')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-gray-velvet" type="radio" name="board-style" checked/>
-                              <img src="images/board/white_gray-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('gray-velvet')"/>
+                              <img src="images/board/white_gray-velvet.png" class="radio-list-img" onClick="radioBoardStyleWhite('gray-velvet')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-sand-velvet" type="radio" name="board-style" checked/>
-                              <img src="images/board/white_sand-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('sand-velvet')"/>
+                              <img src="images/board/white_sand-velvet.png" class="radio-list-img" onClick="radioBoardStyleWhite('sand-velvet')"/>
                             </div>
                             
                             <div class="radio-list-item">
                               <input id="board-style-white-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/white_ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('ornate')"/>
+                              <img src="images/board/white_ornate.png" class="radio-list-img" onClick="radioBoardStyleWhite('ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-beige-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/white_beige-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('beige-ornate')"/>
+                              <img src="images/board/white_beige-ornate.png" class="radio-list-img" onClick="radioBoardStyleWhite('beige-ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-marble-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/white_marble-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('marble-ornate')"/>
+                              <img src="images/board/white_marble-ornate.png" class="radio-list-img" onClick="radioBoardStyleWhite('marble-ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-white-blue-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/white_blue-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleWhite('blue-ornate')"/>
+                              <img src="images/board/white_blue-ornate.png" class="radio-list-img" onClick="radioBoardStyleWhite('blue-ornate')"/>
                             </div>
-                          </form><br/>
+                          </form>
                           <form>
                             Black squares<br/>
                             <div class="radio-list-item">
                               <input id="board-style-black-simple" type="radio" name="board-style" checked/>
-                              <img src="images/board/black_simple.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('simple')" />
+                              <img src="images/board/black_simple.png" class="radio-list-img" onClick="radioBoardStyleBlack('simple')" />
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-green-velvet" type="radio" name="board-style"/>
-                              <img src="images/board/black_green-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('green-velvet')"/>
+                              <img src="images/board/black_green-velvet.png" class="radio-list-img" onClick="radioBoardStyleBlack('green-velvet')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-blue-velvet" type="radio" name="board-style"/>
-                              <img src="images/board/black_blue-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('blue-velvet')"/>
+                              <img src="images/board/black_blue-velvet.png" class="radio-list-img" onClick="radioBoardStyleBlack('blue-velvet')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-dark-gem" type="radio" name="board-style"/>
-                              <img src="images/board/black_dark-gem.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('dark-gem')"/>
+                              <img src="images/board/black_dark-gem.png" class="radio-list-img" onClick="radioBoardStyleBlack('dark-gem')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/black_ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('ornate')"/>
+                              <img src="images/board/black_ornate.png" class="radio-list-img" onClick="radioBoardStyleBlack('ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-green-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/black_green-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('green-ornate')"/>
+                              <img src="images/board/black_green-ornate.png" class="radio-list-img" onClick="radioBoardStyleBlack('green-ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-blue-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/black_blue-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('blue-ornate')"/>
+                              <img src="images/board/black_blue-ornate.png" class="radio-list-img" onClick="radioBoardStyleBlack('blue-ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-black-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/black_black-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('black-ornate')"/>
+                              <img src="images/board/black_black-ornate.png" class="radio-list-img" onClick="radioBoardStyleBlack('black-ornate')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-red-velvet" type="radio" name="board-style"/>
-                              <img src="images/board/black_red-velvet.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('red-velvet')"/>
+                              <img src="images/board/black_red-velvet.png" class="radio-list-img" onClick="radioBoardStyleBlack('red-velvet')"/>
                             </div>
                             <div class="radio-list-item">
                               <input id="board-style-black-red-ornate" type="radio" name="board-style"/>
-                              <img src="images/board/black_red-ornate.png" class="radio-list-img" height="50" width="50" onClick="radioBoardStyleBlack('red-ornate')"/>
+                              <img src="images/board/black_red-ornate.png" class="radio-list-img" onClick="radioBoardStyleBlack('red-ornate')"/>
                             </div>
                           </form>
                         </div>
@@ -776,26 +783,44 @@
                           <form>
                             <input id="antialiasing-checkbox" type="checkbox" onClick="checkboxAntialiasing()"/>
                             Antialiasing (not reccomended for slower devices)
-                            <br/>
-                            <br/>
+                          </form>
+                          <form>
                             <input id="hide-chat-time" type="checkbox" onClick="checkboxHideChatTime()"/>
                             Hide chat time
-                            <br/>
-                            <br/>
+                          </form>
+                          <form>
                             <input id="hide-send-checkbox" type="checkbox" onClick="checkboxHideSend()"/>
                             Hide 'Send' button
-                            <br/>
-                            <br/>
+                          </form>
+                          <form>
                             <input id="auto-open-chat-checkbox" type="checkbox" onClick="checkboxAutoOpenChat()" checked/>
                             Show/Hide chat on window resize
+                          </form>
+                          <br/>
+                          <p>
+                            <b>
+                              Board and Pieces
+                            </b>
                             <br/>
-                            <br/>
+                          </p>
+                          <form>
+                            <input id="wall-orientation" type="checkbox" onClick="checkboxDiagonalWalls()"/>
+                            Diagonal walls
+                          </form>
+                          <form>
                             <input id="auto-rotate-checkbox" type="checkbox" onClick="checkboxAutoRotate()" checked/>
                             Rotate board when player 2
                           </form>
+                          <form>
+                            Piece size
+                            <input id="piece-size-slider" type="range" value="80" step="2" min="60" max="88" oninput="sliderPieceSize(this.value)" onChange="board.updatepieces()"/> 
+                            <span id="piece-size-display">88</span>
+                          </form>
+                          <form>
+                            <input id="table-checkbox" type="checkbox" onClick="checkboxTable()"/>
+                            Show table
+                          </form>
                         </div>
-                        
-                        <br/>
                         <p><br/><i>
                           Settings made in this dialog are stored local.
                           If you log in from another device, or if you delete your browser cache,
@@ -861,7 +886,7 @@
             <a href="#" onclick="zoom(false)">
                 <img src="images/ic_zoom_in_black_24px.svg" height="40" width="40"/>
             </a>
-            <a href="#" onclick="board.reverseboard()">
+            <a href="#" onclick="board.reverseboard(true)">
                 <img src="images/ic_screen_rotation_black_24px.svg" height="35" width="35"/>
             </a>
             <a href="#" onclick="tour(true)">
@@ -925,10 +950,12 @@
             var capstone_ring_width = 0.5;
             var capstone_ring_depth = 0.5;
             var capstone_ring_burring = 0.5;
-            var capstone_rings = [10.3, 53.5, 58.3];
+            var capstone_rings = [9.3, 52.5, 57.3];
             var capstone_top_rings = [22.27, 24.43];
-            var piece_geometry;
-            var caps_geometry;
+            var white_piece_geometry;
+            var black_piece_geometry;
+            var white_caps_geometry;
+            var black_caps_geometry;
             var white_square_tex_name = 'images/board/white_simple.png';
             var black_square_tex_name = 'images/board/black_simple.png';
             var white_piece_tex_name = 'images/pieces/white_simple_pieces.png';
@@ -951,6 +978,7 @@
                 mycolor: "white",
                 movecount: 0,
                 scratch: true,
+                table: null,
                 sq: [],
                 board_objects: [],
                 piece_objects: [],
@@ -1034,9 +1062,12 @@
                     table_material.minFilter = THREE.LinearMipMapFilter;
                     table_material.anisotropy = 1;
                     var geometry = constructBurredBox(table_width, table_height, table_depth, 5, 5, 5);
-                    var table = new THREE.Mesh(geometry, table_material);
-                    table.position.set(0, -(table_height + sq_height) / 2, -sq_size / 2);
-                    scene.add(table);
+                    this.table = new THREE.Mesh(geometry, table_material);
+                    this.table.position.set(0, -(table_height + sq_height) / 2, -sq_size / 2);
+                    scene.add(this.table);
+                    if(localStorage.getItem('table')!=='true') {
+                      this.table.visible = false;
+                    }
                 },
                 addlight: function() {
                     var light = new THREE.PointLight(0xAAAAAA, light_radius[0], light_radius[1]);
@@ -1055,10 +1086,10 @@
                     
                     var white_material = new THREE.MeshLambertMaterial({map: white_texture});
                     var black_material = new THREE.MeshLambertMaterial({map: black_texture});
-                    white_material.magFilter = THREE.LinearFilter;
+                    white_material.magFilter = THREE.LinearMipMapFilter;
                     white_material.minFilter = THREE.LinearMipMapFilter;
                     white_material.anisotropy = renderer.getMaxAnisotropy();
-                    black_material.magFilter = THREE.LinearFilter;
+                    black_material.magFilter = THREE.LinearMipMapFilter;
                     black_material.minFilter = THREE.LinearMipMapFilter;
                     black_material.anisotropy = renderer.getMaxAnisotropy();
 
@@ -1183,7 +1214,7 @@
                         var stackno = Math.floor(i / 10);
                         var stackheight = i % 10;
 
-                        piece = new THREE.Mesh(piece_geometry, white_material);
+                        piece = new THREE.Mesh(white_piece_geometry, white_material);
                         piece.position.set(this.position.endx + 50, stackheight * piece_height, this.position.endz - piece_size - stackno * stack_dist);
                         piece.iswhitepiece = true;
                         piece.isstanding = false;
@@ -1194,7 +1225,7 @@
                         this.piece_objects.push(piece);
                         scene.add(piece);
 
-                        piece = new THREE.Mesh(piece_geometry, black_material);
+                        piece = new THREE.Mesh(black_piece_geometry, black_material);
                         piece.position.set(this.position.x - 50 - piece_size, stackheight * piece_height, this.position.z + stackno * stack_dist);
                         piece.iswhitepiece = false;
                         piece.isstanding = false;
@@ -1207,7 +1238,7 @@
                     }
                     for (i = 0; i < this.totcaps; i++) {
                         var stackno = Math.ceil(this.tottiles / 10) + i;
-                        piece = new THREE.Mesh(caps_geometry, white_cap_material);
+                        piece = new THREE.Mesh(white_caps_geometry, white_cap_material);
                         piece.position.set(this.position.endx + 50, (capstone_height - sq_height) / 2, this.position.endz - piece_size - stackno * stack_dist);
                         piece.iswhitepiece = true;
                         piece.isstanding = true;
@@ -1218,7 +1249,7 @@
                         this.piece_objects.push(piece);
                         scene.add(piece);
 
-                        piece = new THREE.Mesh(caps_geometry, black_cap_material);
+                        piece = new THREE.Mesh(black_caps_geometry, black_cap_material);
                         piece.position.set(this.position.x - 50 - piece_size, (capstone_height - sq_height) / 2, this.position.z + stackno * stack_dist);
                         piece.iswhitepiece = false;
                         piece.isstanding = true;
@@ -1240,7 +1271,6 @@
                     white_material.magFilter = THREE.LinearFilter;
                     white_material.minFilter = THREE.LinearMipMapFilter;
                     white_material.anisotropy = renderer.getMaxAnisotropy();
-                    white_material.needsupdate = true;
                     black_material.magFilter = THREE.LinearFilter;
                     black_material.minFilter = THREE.LinearMipMapFilter;
                     black_material.anisotropy = renderer.getMaxAnisotropy();
@@ -1278,6 +1308,7 @@
                     black_cap_material.magFilter = THREE.LinearFilter;
                     black_cap_material.minFilter = THREE.LinearMipMapFilter;
                     black_cap_material.anisotropy = 1;
+
                     
                     // reconstruct geometries.
                     constructGeometries();
@@ -1296,7 +1327,9 @@
                         }
                         
                         if (this.piece_objects[i].iscapstone) {
-                        // <updates on the capstones will be made here>
+                            // reapply geometry.
+                            this.piece_objects[i].geometry = (this.piece_objects[i].iswhitepiece ?
+                                white_caps_geometry : black_caps_geometry);
                         } else {
                             // if standing, reset and reapply orientation.
                             if (this.piece_objects[i].isstanding) {
@@ -1308,7 +1341,8 @@
                             }
 
                             // reapply geometry.
-                            this.piece_objects[i].geometry = piece_geometry;
+                            this.piece_objects[i].geometry = (this.piece_objects[i].iswhitepiece ?
+                                white_piece_geometry : black_piece_geometry);
                             this.piece_objects[i].updateMatrix();
                         }
                     }
@@ -1727,9 +1761,9 @@
                     this.gameover();
                     return true;
                 },
-                reverseboard: function () {
+                reverseboard: function (force) {
                     this.boardside = (this.boardside === "white") ? "black" : "white";
-                    if (localStorage.getItem('auto_rotate')!=='false')
+                    if (force || localStorage.getItem('auto_rotate')!=='false')
                     {
                       camera.position.z = -camera.position.z;
                       camera.position.x = -camera.position.x;
@@ -2883,13 +2917,31 @@
              */
             function constructGeometries()
             {
-              // construct piece geometry.
-              piece_geometry = constructBurredBox(piece_size, piece_height, piece_size, 
+              if (localStorage.getItem('piece_style_white')!=='simple') {
+                // construct complex geometry.
+                white_piece_geometry = constructBurredBox(piece_size, piece_height, piece_size, 
                   burring_depth, burring_height, burring_vertical);
-            
-              // construct capstone geometry.
-              //caps_geometry = new THREE.CylinderGeometry(capstone_radius, capstone_radius, capstone_height, 32);
-              caps_geometry = constructCapstoneGeometry();
+                white_caps_geometry = constructCapstoneGeometry();
+              }
+              else
+              {
+                // construct simple geometry.
+                white_piece_geometry = new THREE.BoxGeometry(piece_size, piece_height, piece_size);
+                white_caps_geometry = new THREE.CylinderGeometry(capstone_radius, capstone_radius, capstone_height, 32);
+              }
+
+              if (localStorage.getItem('piece_style_black')!=='simple') {
+                // construct complex geometry.
+                black_piece_geometry = constructBurredBox(piece_size, piece_height, piece_size, 
+                  burring_depth, burring_height, burring_vertical);
+                black_caps_geometry = constructCapstoneGeometry();
+              }
+              else
+              {
+                // construct simple geometry.
+                black_piece_geometry = new THREE.BoxGeometry(piece_size, piece_height, piece_size);
+                black_caps_geometry = new THREE.CylinderGeometry(capstone_radius, capstone_radius, capstone_height, 32);
+              }
             }
             
             /**
@@ -2985,7 +3037,7 @@
                   geometry.faceVertexUvs[0].push([
                       new THREE.Vector2((i + 1) / segments, texPoints[p]),
                       new THREE.Vector2(i / segments, texPoints[(p + 1) % segments]),
-                      new THREE.Vector2((i + 1) / segments, texPoints[(p + 1) % segments])
+                      new THREE.Vector2((i + 1)/ segments, texPoints[(p + 1) % segments])
                   ]);
                 }
               }
@@ -3178,9 +3230,12 @@
                 new THREE.Face3(16, 6, 13)
               );
               // texture corners.
-              for (i = 0; i < 8; ++i)
+              for (i = 0; i < 2; ++i)
               {
-                geometry.faceVertexUvs[0][36 + i] = [tex_left[3], tex_left[0], tex_left[3]];
+                geometry.faceVertexUvs[0][36 + i * 4] = [tex_left[3], tex_left[0], tex_left[3]];
+                geometry.faceVertexUvs[0][37 + i * 4] = [tex_bottom[3], tex_bottom[0], tex_bottom[3]];
+                geometry.faceVertexUvs[0][38 + i * 4] = [tex_right[3], tex_right[0], tex_right[3]];
+                geometry.faceVertexUvs[0][39 + i * 4] = [tex_top[3], tex_top[0], tex_top[3]];
               }
               
               // do posterior work.
@@ -3200,6 +3255,11 @@
                 document.getElementById('wall-orientation').checked = true;
                 diagonal_walls = true;
               }
+              
+              // load the setting for table visibility.
+              if(localStorage.getItem('table')==='true') {
+                document.getElementById('table-checkbox').checked = true;
+              }
 
               // load the setting for piece size.
               if(localStorage.getItem('piece_size')!==null) {
@@ -3212,6 +3272,12 @@
               if (localStorage.getItem('piece_style_white')!==null) {
                 var styleName = localStorage.getItem('piece_style_white');
                 white_piece_tex_name = 'images/pieces/white_' + styleName + '_pieces.png';
+                if (THREE.ImageUtils.loadTexture(white_piece_tex_name)===null)
+                {
+                  styleName = 'simple';
+                  localStorage.setItem('piece_style_white', styleName);
+                  white_piece_tex_name = 'images/pieces/white_' + styleName + '_pieces.png';
+                }
                 white_caps_tex_name = 'images/pieces/white_' + styleName + '_caps.png';
                 document.getElementById('piece-style-white-' + styleName).checked = true;
               }
@@ -3220,22 +3286,41 @@
               if (localStorage.getItem('piece_style_black')!==null) {
                 var styleName = localStorage.getItem('piece_style_black');
                 black_piece_tex_name = 'images/pieces/black_' + styleName + '_pieces.png';
+                if (THREE.ImageUtils.loadTexture(black_piece_tex_name)===null)
+                {
+                  styleName = 'simple';
+                  localStorage.setItem('piece_style_black', styleName);
+                  black_piece_tex_name = 'images/pieces/black_' + styleName + '_pieces.png';
+                }
+                black_piece_tex_name = 'images/pieces/black_' + styleName + '_pieces.png';
                 black_caps_tex_name = 'images/pieces/black_' + styleName + '_caps.png';
                 document.getElementById('piece-style-black-' + styleName).checked = true;
-              }
-              
-              // load black board style.
-              if (localStorage.getItem('board_style_back')!==null) {
-                var styleName = localStorage.getItem('board_style_back');
-                black_square_tex_name = 'images/board/black_' + styleName + '.png';
-                document.getElementById('board-style-black-' + styleName).checked = true;
               }
               
               // load white board style.
               if (localStorage.getItem('board_style_white')!==null) {
                 var styleName = localStorage.getItem('board_style_white');
                 white_square_tex_name = 'images/board/white_' + styleName + '.png';
+                if (THREE.ImageUtils.loadTexture(white_square_tex_name)===null)
+                {
+                  styleName = 'simple';
+                  localStorage.setItem('board_style_white', styleName);
+                  white_square_tex_name = 'images/board/white_' + styleName + '_pieces.png';
+                }
                 document.getElementById('board-style-white-' + styleName).checked = true;
+              }
+              
+              // load black board style.
+              if (localStorage.getItem('board_style_back')!==null) {
+                var styleName = localStorage.getItem('board_style_back');
+                black_square_tex_name = 'images/board/black_' + styleName + '.png';
+                if (THREE.ImageUtils.loadTexture(black_square_tex_name)===null)
+                {
+                  styleName = 'simple';
+                  localStorage.setItem('board_style_black', styleName);
+                  black_square_tex_name = 'images/board/black_' + styleName + '_pieces.png';
+                }
+                document.getElementById('board-style-black-' + styleName).checked = true;
               }
 
               // load the setting for antialiasing.
@@ -3411,6 +3496,20 @@
                 localStorage.setItem('auto_rotate', 'true');
               } else {
                 localStorage.setItem('auto_rotate', 'false');
+              }
+            }
+            
+            /**
+             * Notify checkbox change for checkbox:
+             *   Show table
+             */
+            function checkboxTable() {
+              if (document.getElementById('table-checkbox').checked) {
+                localStorage.setItem('table', 'true');
+                board.table.visible = true;
+              } else {
+                localStorage.setItem('table', 'false');
+                board.table.visible = false;
               }
             }
 
