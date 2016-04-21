@@ -945,7 +945,7 @@
             var diagonal_walls = false;
             var render_light = false;
             var burring_depth = 4;
-            var burring_height = 0.5;
+            var burring_height = 1;
             var burring_vertical = 1;
             var capstone_ring_width = 0.5;
             var capstone_ring_depth = 0.5;
@@ -1064,6 +1064,7 @@
                     var geometry = constructBurredBox(table_width, table_height, table_depth, 5, 5, 5);
                     this.table = new THREE.Mesh(geometry, table_material);
                     this.table.position.set(0, -(table_height + sq_height) / 2, -sq_size / 2);
+                    this.table.ispassive = true;
                     scene.add(this.table);
                     if(localStorage.getItem('table')!=='true') {
                       this.table.visible = false;
@@ -1119,28 +1120,17 @@
                         }
                     }
 
-                    var border_material = new THREE.MeshLambertMaterial({color: 0x6f4734});
-                    geometry = new THREE.BoxGeometry(this.size * sq_size + 2 * border_size, piece_height, border_size);
-
-                    var border = new THREE.Mesh(geometry, border_material);
-                    border.position.set(0, 0, startz - sq_size / 2 - border_size / 2);
-                    scene.add(border);
-
-                    border = new THREE.Mesh(geometry, border_material);
-                    border.rotateY(Math.PI);
-                    border.position.set(0, 0, this.position.endz - sq_size / 2 + border_size / 2);
-                    scene.add(border);
-
-                    geometry = new THREE.BoxGeometry(this.size * sq_size, piece_height, border_size);
-                    border = new THREE.Mesh(geometry, border_material);
-                    border.rotateY(Math.PI / 2);
-                    border.position.set(this.position.x - sq_size / 2 - border_size / 2, 0, -sq_size / 2);
-                    scene.add(border);
-
-                    border = new THREE.Mesh(geometry, border_material);
-                    border.rotateY(-Math.PI / 2);
-                    border.position.set(this.position.endx - border_size, 0, -sq_size / 2);
-                    scene.add(border);
+                    // board border.
+                    var board_tex = THREE.ImageUtils.loadTexture('images/board.png');
+                    var border_material = new THREE.MeshLambertMaterial({map: board_tex});
+                    border_material.magFilter = THREE.LinearMipMapFilter;
+                    border_material.minFilter = THREE.LinearMipMapFilter;
+                    border_material.anisotropy = renderer.getMaxAnisotropy();
+                    geometry = new constructBurredBox(this.size * sq_size + 2 * border_size, piece_height, this.size * sq_size + 2 * border_size, 6, 1.5, 0);
+                    var board = new THREE.Mesh(geometry, border_material);
+                    board.position.set(0, -0.5, -sq_size / 2);
+                    board.ispassive = true;
+                    scene.add(board);
 
                     var material = new THREE.MeshLambertMaterial({color: 0xFFF5B5});
                     for (var i = 0; i < this.size; i++) {
@@ -1157,7 +1147,7 @@
                                 {size: letter_size, height: 1, font: 'helvetiker', weight: 'normal'});
                         letter = new THREE.Mesh(geometry, material);
                         letter.rotateX(-Math.PI / 2);
-                        letter.position.set(this.position.x - sq_size / 2 - border_size / 2 - letter_size / 2, sq_height / 2,
+                        letter.position.set(this.position.x - sq_size / 2 - border_size / 2 - letter_size / 2 + digit_adjustment * 2, sq_height / 2,
                                 this.position.endz - border_size - sq_size / 2 - letter_size / 2 - digit_adjustment - i * sq_size);
                         scene.add(letter);
                     }
@@ -1176,7 +1166,7 @@
                         letter = new THREE.Mesh(geometry, material);
                         letter.rotateX(-Math.PI / 2);
                         letter.rotateZ(Math.PI);
-                        letter.position.set(this.position.endx - sq_size / 2 + border_size / 2 + letter_size / 2, sq_height / 2,
+                        letter.position.set(this.position.endx - sq_size / 2 + border_size / 2 + letter_size / 2 - digit_adjustment * 2, sq_height / 2,
                                 this.position.endz - border_size - sq_size / 2 - letter_size * 1.5 - digit_adjustment - i * sq_size);
                         scene.add(letter);
                     }
@@ -1519,11 +1509,16 @@
                         return;
 
                     var intersects = raycaster.intersectObjects(scene.children);
-
+                    
                     if (intersects.length > 0) {
                         var obj = intersects[0].object;
-                        if (!obj.isboard && !obj.onsquare)
-                            return;
+                        if (obj.ispassive){
+                          this.unhighlight_sq();
+                          return;
+                        }
+                        else if (!obj.isboard && !obj.onsquare){
+                          return;
+                        }
                         if (!obj.isboard)
                             obj = obj.onsquare;
 
@@ -3015,18 +3010,41 @@
               {
                 for (p = 0; p < points.length - 1; ++p)
                 {
+                  // calculate normals.
+                  var dist = Math.sqrt(
+                      (points[p + 1].x - points[p].x) * (points[p + 1].x - points[p].x) +
+                      (points[p + 1].y - points[p].y) * (points[p + 1].y - points[p].y));
+                  var unrotatedNormal = [
+                      (points[p + 1].y - points[p].y) / dist,
+                      (points[p].x - points[p + 1].x) / dist,
+                      (points[p + 1].y - points[p].y) / dist
+                  ];
+                  var normals = [
+                      new THREE.Vector3(
+                          Math.cos(segmentRad * (i % segments)) * unrotatedNormal[0],
+                          unrotatedNormal[1],
+                          Math.sin(segmentRad * (i % segments)) * unrotatedNormal[2]
+                      ),
+                      new THREE.Vector3(
+                          Math.cos(segmentRad * ((i + 1) % segments)) * unrotatedNormal[0],
+                          unrotatedNormal[1],
+                          Math.sin(segmentRad * ((i + 1) % segments)) * unrotatedNormal[2]
+                      )
+                  ];
                   // create 2 faces per point (except for the last point in the spline)
                   face = new THREE.Face3(
                       i * points.length + p,
                       i * points.length + p + 1,
                       (i + 1) % segments * points.length + p
                   );
+                  face.vertexNormals = [normals[0], normals[0], normals[1]];
                   geometry.faces.push(face);
                   face = new THREE.Face3(
                       (i + 1) % segments * points.length + p,
                       i * points.length + p + 1,
                       (i + 1) % segments * points.length + p + 1
                   );
+                  face.vertexNormals = [normals[1], normals[0], normals[1]];
                   geometry.faces.push(face);
                   // add two UVS
                   geometry.faceVertexUvs[0].push([
@@ -3034,6 +3052,7 @@
                       new THREE.Vector2(i / segments, texPoints[(p + 1) % segments]),
                       new THREE.Vector2((i + 1) / segments, texPoints[p])
                   ]);
+                  
                   geometry.faceVertexUvs[0].push([
                       new THREE.Vector2((i + 1) / segments, texPoints[p]),
                       new THREE.Vector2(i / segments, texPoints[(p + 1) % segments]),
@@ -3045,7 +3064,7 @@
               // do posterior work.
               geometry.uvsNeedUpdate = true;
               geometry.computeBoundingBox();
-              geometry.computeFaceNormals();
+              //geometry.computeFaceNormals();
               geometry.center();
               return geometry;
             }
