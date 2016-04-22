@@ -30,6 +30,8 @@ body {
     height: 80%;
 }
 #chat-server {
+    padding: 3px;
+    word-wrap: break-word;
     background-color: #e7e7e9;
     height:100%;
     overflow-y: auto;
@@ -37,8 +39,24 @@ body {
 .chatname {
   font-weight: bold;
 }
+.chatmyname {
+  color: red;
+}
+.playername {
+  font-weight: bold;
+}
+.bold {
+  font-weight: bold;
+}
+.cmdreply {
+  font-style: italic;
+  color: blue;
+}
+.ircname {
+  color: #8C6F65;
+}
 .chattime {
-  font-weight: italic;
+  color: #7D7D7D;
 }
 #chat-toggle-text {
 }
@@ -277,4 +295,9 @@ input[type=range]::-webkit-slider-runnable-track {
   padding: 5px;
   margin: 2px;
   border : 2px solid black;
+}
+.scrollable-menu {
+  height: auto;
+  max-height: 280px;
+  overflow-x: hidden;
 }
