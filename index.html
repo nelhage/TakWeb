@@ -34,12 +34,14 @@
         <script src="js/three.min.js"></script>
         <script src="js/OrbitControls.min.js"></script>
         <script src="js/helvetiker_regular.typeface.js"></script>
+        <script src="js/linkify.min.js"></script>
+        <script src="js/linkify-string.min.js"></script>
 
 <!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/bootstrap-tour.min.js"></script>
-
+        
         <!-- Tak javascripts -->
         <script src="js/playtaktour.js"></script>
         <script src="js/settings.js"></script>
@@ -96,7 +98,7 @@
                                title="Accept a seek" aria-haspopup="true" aria-expanded="false"> Join game
                                 <span class="badge" id="seekcount">0</span>
                                 <span class="caret"></span></a>
-                            <ul id="seeklist" class="dropdown-menu">
+                            <ul id="seeklist" class="dropdown-menu scrollable-menu">
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -104,7 +106,7 @@
                                title="Observe a game" aria-haspopup="true" aria-expanded="false"> Watch
                                 <span class="badge" id="gamecount">0</span>
                                 <span class="caret"></span></a>
-                            <ul id="gamelist" class="dropdown-menu">
+                            <ul id="gamelist" class="dropdown-menu scrollable-menu">
                             </ul>
                         </li>
                     </ul>
@@ -142,7 +144,7 @@
             <a title="Click to show/hide menu" href="#" onclick="rmenu()">
                 <!--<img src="images/ic_menu_black_24px.svg" height="30" width="30"/>-->
                 <div id="notation-toggle-text" class="toggle-text">
-                    <<<br>n<br>o<br>t<br>a<br>t<br>i<br>o<br>n
+                    &lt;&lt;<br>n<br>o<br>t<br>a<br>t<br>i<br>o<br>n
                 </div>
             </a>
             <ul id="rmenu" style="list-style-type:none">
@@ -180,7 +182,7 @@
                 <!--<img src="images/ic_menu_black_24px.svg" width="24" height="24">-->
                 <!--<div class="vertical-text">chat</div>-->
                 <div id="chat-toggle-text" class="toggle-text">
-                >><br>
+                &gt;&gt;<br>
                 c<br>h<br>a<br>t
                 </div>
             </a>
@@ -279,7 +281,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-sm-6 center" id="gameoveralert-text">
+                            <div class="col-sm-12 center" id="gameoveralert-text">
                             </div>
                         </div>
                         <div class="modal-footer center">
@@ -548,7 +550,8 @@
                                     <li>White goes first</li>
                                     <li>On first move, each player must place his opponent's tile</li>
                                     <li>Create a path with flat stones and capstones between any two opposite ends of the board</li>
-                                    <li>Complete rules can be found <a target="_blank" href="http://cheapass.com/sites/default/files/TakBetaRules3-10-16.pdf">here</a> [PDF].</li>
+                                    <li>Complete rules can be found <a target="_blank" href="http://cheapass.com/sites/default/files/TakBetaRules3-10-16.pdf">here</a> [PDF]</li>
+                                    <li>You can learn about the game notation <a target="_blank" href="https://www.reddit.com/r/Tak/wiki/portable_tak_notation">here</a></li>
                                 </ul></li>
                             <li><ul>Controls:
                                     <li>Left click-drag (or touch-drag) to rotate board</li>
@@ -571,6 +574,7 @@
                                 </ul></li>
                             <li><ul>About the game:
                                     <li>Rules for TAK are made by <a target="_blank" href="https://en.wikipedia.org/wiki/James_Ernest">James Ernest</a> and <a target="_blank" href="https://en.wikipedia.org/wiki/Patrick_Rothfuss">Patrick Rothfuss</a>. Visit <a target="_blank" href="http://cheapass.com/games/tak">cheapass.com</a> for more info</li>
+                                    <li>Back the <b><a target="_blank" href="https://www.kickstarter.com/projects/cheapassgames/tak-a-beautiful-game">Tak Kickstarter!</a></b></li>
                                     <li>This is an unofficial implementation by <a target="_blank" href="https://github.com/chaitu236">Chaitanya Vadrevu (me)</a></li>
                                     <li>Front end code can be found <a target="_blank" href="https://github.com/chaitu236/TakWeb">here</a>,
                                     backend code <a target="_blank" href="https://github.com/chaitu236/TakServer">here</a></li>
@@ -599,28 +603,27 @@
         </div>
         <script src="js/tak.js"></script>
         <script>
-            $(document).ready(function() {
-                if(localStorage.getItem('sound')==='flase') {
-                    volume_change();
-                }
-                if(localStorage.getItem('keeploggedin')==='true') {
-                    server.init();
-                }
-                if(isBreakpoint('xs') || isBreakpoint('sm')) {
-                    hidechat();
-                    hidermenu();
-                } else {
-                    showchat();
-                    showrmenu();
-                }
+          $(document).ready(function() {
+              if(localStorage.getItem('sound')==='flase') {
+                  volume_change();
+              }
+              if(localStorage.getItem('keeploggedin')==='true') {
+                  server.init();
+              }
+              if(isBreakpoint('xs') || isBreakpoint('sm')) {
+                  hidechat();
+                  hidermenu();
+              } else {
+                  showchat();
+                  showrmenu();
+              }
 
-                $('#chat').offset({ top: $('nav').height() + 5 });
-                $('#chat-toggle-button').offset({ top: $('nav').height() + 7 });
+              $('#chat').offset({ top: $('nav').height() + 5 });
+              $('#chat-toggle-button').offset({ top: $('nav').height() + 7 });
 
-                tour(false);
-            })
+              tour(false);
+          })
         </script>
-
     </body>
 </html>
 
