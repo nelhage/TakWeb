@@ -23,15 +23,20 @@ function alert2(type, msg) {
         $alert.addClass('hidden');
     });
 }
+
 var camera, scene, renderer, light, canvas, controls = null;
 var raycaster = new THREE.Raycaster();
 var highlighter;
 var mouse = new THREE.Vector2();
 var offset = new THREE.Vector3();
 
+// calls to initialize the UI and animate the 3D canvas.
 init();
 animate();
 
+/*
+ * Called on file initialization.
+ */
 function init() {
     // load the user settings.
     loadSettings();
@@ -70,7 +75,6 @@ function init() {
 
     var material = new THREE.LineBasicMaterial({color: 0x0000f0});
     var geometry = new THREE.TorusGeometry(sq_size / 2 + 5, 3, 16, 100);
-    
     //geometry.vertices.shift();
     highlighter = new THREE.Mesh(geometry, material);
     highlighter.rotateX(Math.PI / 2);
@@ -81,6 +85,10 @@ function init() {
 
     board.init(5, "white", true);
 }
+
+/*
+ * Called on window scaling.
+ */
 function onWindowResize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -106,6 +114,7 @@ function onWindowResize() {
     }
   }
 }
+
 function animate() {
     setTimeout(function () {
         requestAnimationFrame(animate);
@@ -114,6 +123,7 @@ function animate() {
     renderer.render(scene, camera);
     controls.update();
 }
+
 function onDocumentMouseMove(e) {
     e.preventDefault();
     var x = e.clientX - canvas.offsetLeft;
@@ -123,6 +133,7 @@ function onDocumentMouseMove(e) {
 
     board.mousemove();
 }
+
 function onDocumentMouseDown(e) {
     e.preventDefault();
 
@@ -143,12 +154,14 @@ function onDocumentMouseUp(e) {
 function output(e) {
     console.log("output:" + e);
 }
+
 function buttonclick() {
     var input = document.getElementById("input");
     var data = input.value;
     input.value = "";
     server.send(data);
 }
+
 function scratchbutton(size) {
     if (board.observing)
         server.send("Unobserve " + board.gameno);
@@ -230,4 +243,3 @@ function hidechat() {
 function isBreakpoint( alias ) {
     return $('.device-' + alias).is(':hidden');
 }
-
