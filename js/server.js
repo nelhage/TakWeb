@@ -1,3 +1,6 @@
+// server greeting message.
+var server_greeting = "TreffnonX-22.04.16";
+
 var server = {
     connection: null,
     timeoutvar: null,
@@ -276,7 +279,7 @@ var server = {
           }
         }
         else if (e.startsWith("Login or Register")) {
-            server.send("Client " + "TakWeb-16.03.16");
+            server.send("Client " + server_greeting);
 
             if(localStorage.getItem('keeploggedin')==='true' && this.tries<3) {
               var uname = localStorage.getItem('usr');
