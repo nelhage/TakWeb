@@ -167,15 +167,27 @@ var server = {
         else if (e.startsWith("GameList Add Game#")) {
             //GameList Add Game#1 player1 vs player2, 4x4, 180, 0 half-moves played, player1 to move
             var spl = e.split(" ");
+
+            var no = spl[2].split("Game#")[1];
+
             var t = Number(spl[7].split(",")[0]);
             var m = parseInt(t/60);
             var s = getZero(parseInt(t%60));
 
-            var val = spl[3] + " vs " + spl[5].split(",")[0] + " " + spl[6].split(",")[0] + " " + m+':'+s;
-            var $li = $('<li/>').appendTo($('#gamelist'));
-            $('<a/>').text(val).
-                    click(function() {server.observegame(spl[2].split("Game#")[1]);}).
-                        appendTo($li);
+            var p1 = spl[3];
+            var p2 = spl[5].split(",")[0];
+            var sz = spl[6].split(",")[0];
+
+            p1 = "<span class='playername'>"+p1+"</span>";
+            p2 = "<span class='playername'>"+p2+"</span>";
+            sz = "<span class='badge'>"+sz+"</span>";
+
+            //var val = spl[3] + " vs " + spl[5].split(",")[0] + " " + spl[6].split(",")[0] + " " + m+':'+s;
+            var val = p1 + " vs " + p2 + " " + sz + " " + m+":"+s;
+
+            var li = $('<li/>').addClass('game'+no).appendTo($('#gamelist'));
+            $('<a/>').append(val).click(function() {server.observegame(spl[2].split("Game#")[1]);}).
+                                  appendTo(li);
 
             var op = document.getElementById("gamecount");
             op.innerHTML = Number(op.innerHTML)+1;
@@ -183,16 +195,9 @@ var server = {
         else if (e.startsWith("GameList Remove Game#")) {
             //GameList Remove Game#1 player1 vs player2, 4x4, 180, 0 half-moves played, player1 to move
             var spl = e.split(" ");
-            var t = Number(spl[7].split(",")[0]);
-            var m = parseInt(t/60);
-            var s = getZero(parseInt(t%60));
 
-            var val = spl[3] + " vs " + spl[5].split(",")[0] + " " + spl[6].split(",")[0] + " " + m+':'+s;
-            $('#gamelist').children().each(function() {
-                if($(this).find('a')[0].innerHTML === val) {
-                    this.remove();
-                }
-            });
+            var no = spl[2].split("Game#")[1];
+            $('.game'+no).remove();
 
             var op = document.getElementById("gamecount");
             op.innerHTML = Number(op.innerHTML)-1;
@@ -253,7 +258,39 @@ var server = {
                 board.scratch = true;
                 board.notate(spl[2]);
 
-                var msg = "Game over " + spl[2];
+                var msg = "Game over <span class='bold'>" + spl[2] + "</span><br>";
+                var res;
+                var type;
+
+                if(spl[2] === "R-0" || spl[2] === "0-R")
+                  type = "making a road";
+                else if (spl[2] === "F-0" || spl[2] === "0-F")
+                  type = "having more flats";
+                else if (spl[2] === "1-0" || spl[2] === "0-1")
+                  type = "resignation";
+
+                if(spl[2] === "R-0" || spl[2] === "F-0" || spl[2] === "1-0") {
+                  if(board.observing === true) {
+                    msg += "White wins by "+type;
+                  }
+                  else if(board.mycolor === "white") {
+                    msg += "You win by "+type;
+                  } else {
+                    msg += "Your opponent wins by "+type;
+                  }
+                } else if (spl[2] === "1/2-1/2") {
+                  msg += "The game is a draw!";
+                } else {//black wins
+                  if(board.observing === true) {
+                    msg += "Black wins by "+type;
+                  }
+                  else if(board.mycolor === "white") {
+                    msg += "Your opponent wins by "+type;
+                  } else {
+                    msg += "You win by "+type;
+                  }
+                }
+
                 alert("info", msg);
                 document.getElementById("scratchsize").disabled = false;
                 stopTime();
@@ -268,7 +305,15 @@ var server = {
                 document.title = "Tak";
                 board.scratch = true;
 
-                var msg = "Game abandoned by " + spl[2];
+                if(board.mycolor === "white")
+                  board.notate("1-0");
+                else
+                  board.notate("0-1");
+
+                var msg = "Game abandoned by " + spl[2] + ".";
+                if(!board.observing)
+                  msg += " You win!";
+
                 alert("info", msg);
                 document.getElementById("scratchsize").disabled = false;
                 stopTime();
@@ -355,19 +400,16 @@ var server = {
             alert("danger", "Server says: "+msg);
         }
         else if (e.startsWith("Shout")) {
-            var msg = e.replace(/Shout\s/, "");
-            var name = msg.split('<')[1].split('>')[0];
-            var txt = msg.split('<'+name+'>')[1];
-            var viaIRC = false;
-            if (name=='IRC')
-            {
-              msg = txt;
-              name = msg.split('<')[1].split('>')[0];
-              txt = msg.split('<'+name+'>')[1];
-              viaIRC = true;
+            var msg = e.split("Shout ");
+            var name = msg[1].split('<')[1].split('>')[0];
+            var txt = msg[1].split('<'+name+'>')[1];
+            var clsname = 'chatname';
+
+            if (name=='IRC') {
+              name = txt.split('<')[1].split('>')[0];
+              txt = txt.split('<'+name+'>')[1];
+              clsname = clsname + ' ircname';
             }
-            
-            txt = txt.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace();
 
             var $cs = $('#chat-server');
 
@@ -378,19 +420,27 @@ var server = {
             if (localStorage.getItem('hide-chat-time')==='true') {
               cls = cls + ' hidden';
             }
-            $cs.append('<span class="' + cls + '">[' + getZero(hours) + ':' + getZero(mins) + '] </span>');
-            $cs.append('<span class="chatname"' + (viaIRC ? ' style="color:#33d;"' : '')
-                + '>' + name + ':</span>');
-            if (txt.trim().toLowerCase()=='tak')
-            {
-              $cs.append('<span style="color:#f50;font-weight:bold;"> Tak!</span><br>');
-            } else if (txt.trim().toLowerCase()=='gg') {
-              $cs.append('<span style="color:#2a2;"> Good game!</span><br>');
-            } else if (txt.trim().toLowerCase()=='wp') {
-              $cs.append('<span style="color:#2a2;"> Well played!</span><br>');
-            } else {
-              $cs.append(txt+'<br>');
+            $cs.append('<span class="'+cls+'">['+getZero(hours)+':'+getZero(mins)+'] </span>');
+            $cs.append('<span class="'+clsname+'">'+name+':</span>');
+            var options = {/* ... */};
+
+            txt = txt.linkify(options);
+
+            //someone said our name
+            if(txt.indexOf(this.myname) > -1) {
+              var tmp = txt.split(this.myname);
+              txt = tmp[0] + '<span class="chatmyname">'+this.myname+'</span>' + tmp[1];
             }
+
+            $cs.append(txt+'<br>');
+
+            $cs.scrollTop($cs[0].scrollHeight);
+        }
+        else if (e.startsWith("CmdReply")) {
+            var msg = e.split("CmdReply ")[1];
+            var $cs = $('#chat-server');
+
+            $cs.append('<span class="cmdreply">'+msg+'</span><br>');
             $cs.scrollTop($cs[0].scrollHeight);
         }
         //new seek
@@ -398,14 +448,20 @@ var server = {
             //Seek new 1 chaitu 5 180
             var spl = e.split(" ");
 
+            var no = spl[2];
             var t = Number(spl[5]);
             var m = parseInt(t/60);
             var s = getZero(parseInt(t%60));
 
-            var $li = $('<li/>').appendTo($('#seeklist'));
-            $('<a/>').text(spl[3]+' - '+spl[4]+'x'+spl[4]+' - '+m+':'+s).
-                    click(function() {server.acceptseek(spl[2])}).
-                        appendTo($li);
+            var p = spl[3];
+            var sz = spl[4]+'x'+spl[4];
+
+            p = "<span class='playername'>"+p+"</span>";
+            sz = "<span class='badge'>"+sz+"</span>";
+
+            var li = $('<li/>').addClass('seek'+no).appendTo($('#seeklist'));
+            $('<a/>').append(p + " " + sz + " " + m+":"+s).click(function() {server.acceptseek(spl[2])}).
+                        appendTo(li);
 
             var op = document.getElementById("seekcount");
             op.innerHTML = Number(op.innerHTML)+1;
@@ -415,16 +471,8 @@ var server = {
             //Seek remove 1 chaitu 5 15
             var spl = e.split(" ");
 
-            var t = Number(spl[5]);
-            var m = parseInt(t/60);
-            var s = getZero(parseInt(t%60));
-
-            var val = spl[3]+' - '+spl[4]+'x'+spl[4]+' - '+m+':'+s;
-            $('#seeklist').children().each(function() {
-                if($(this).find('a')[0].innerHTML === val) {
-                    this.remove();
-                }
-            });
+            var no = spl[2];
+            $('.seek'+no).remove();
 
             var op = document.getElementById("seekcount");
             op.innerHTML = Number(op.innerHTML)-1;
@@ -438,7 +486,10 @@ var server = {
     chat: function () {
         var msg = $('#chat-me').val();
         console.log('msg= '+msg);
-        this.send('Shout '+msg);
+        if(msg.startsWith('.'))
+          this.send(msg.slice(1));
+        else
+          this.send('Shout '+msg);
         $('#chat-me').val('');
     },
     send: function (e) {
