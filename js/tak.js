@@ -59,7 +59,7 @@ function init() {
     renderer.setPixelRatio(window.devicePixelRatio);
     //renderer.setSize( window.innerWidth, window.innerHeight );
     //renderer.setSize( 800, 640);
-    renderer.setClearColor(0xdddddd, 1);
+    renderer.setClearColor(0x111111, 1);
 
     document.body.appendChild(renderer.domElement);
 
