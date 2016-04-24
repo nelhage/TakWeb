@@ -142,6 +142,9 @@ function onDocumentMouseDown(e) {
     mouse.x = (x / canvas.width) * 2 - 1;
     mouse.y = -(y / canvas.height) * 2 + 1;
 
+    if(board.movecount !== board.moveshown)
+        return;
+
     if (e.button === 2)
         board.rightclick();
     else
@@ -285,4 +288,27 @@ function downloadNotation() {
 function showPrivacyPolicy() {
     $('#help-modal').modal('hide');
     $('#privacy-modal').modal('show');
+}
+
+function undoButton() {
+  if(board.scratch)
+    board.undo();
+  else
+    server.undo();
+}
+
+function fastrewind() {
+  board.showmove(1);
+}
+
+function stepback() {
+  board.showmove(board.moveshown-1);
+}
+
+function stepforward() {
+  board.showmove(board.moveshown+1);
+}
+
+function fastforward() {
+  board.showmove(board.movecount);
 }
