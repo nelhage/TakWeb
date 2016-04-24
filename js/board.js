@@ -58,7 +58,7 @@ var board = {
     server: null,
     gameno: 0,
     boardside: "white",
-    result: "none",
+    result: "",
     observing: false,
     position: {x: 0, y: 0, endx: 0, endz: 0},
     init: function (sz, col, scr, obs) {
@@ -97,7 +97,7 @@ var board = {
         this.selectedStack = null;
         this.gameno = 0;
         this.move = {start: null, end: null, dir: 'U', squares: []};
-        this.result = "none";
+        this.result = "";
         this.observing = typeof obs !== 'undefined' ? obs : false;
         this.ismymove = this.checkifmymove();
 
@@ -850,6 +850,20 @@ var board = {
         }
     },
     notate: function (txt) {
+        var res=false;
+        if(txt==='R-0'||txt==='0-R'||txt==='F=0'||txt==='0-F'||txt==='1-0'||txt==='0-1'||txt==='1/2-1/2') {
+            var ol = document.getElementById("moveslist");
+            var row = ol.insertRow();
+            var cell0 = row.insertCell(0);
+            cell0.innerHTML = '';
+
+            var cell1 = row.insertCell(1);
+            row.insertCell(2);
+            cell1.innerHTML = txt;
+
+            $('#notationbar').scrollTop($('#moveslist tr:last').position().top);
+            return;
+        }
         if (this.movecount !== 0 && this.movecount % 2 === 1) {
             var om = document.getElementById("moveslist");
             var col = om.rows[om.rows.length - 1].cells[2];

@@ -243,3 +243,46 @@ function hidechat() {
 function isBreakpoint( alias ) {
     return $('.device-' + alias).is(':hidden');
 }
+function getHeader(key, val) {
+  return '['+key+' "'+val+'"]\r\n';
+}
+function downloadNotation() {
+  var p1 = $('.player1-name:first').html();
+  var p2 = $('.player2-name:first').html();
+  var now = new Date();
+  var dt = (now.getYear()-100)+'.'+now.getMonth()+'.'+now.getDate()+' '+now.getHours()+'.'+getZero(now.getMinutes());
+
+  $('#download_notation').attr('download', p1+' vs '+p2+' '+dt+'.ptn');
+
+  var res='';
+  res += getHeader('Site', 'PlayTak.com');
+  res += getHeader('Date', '20'+(now.getYear()-100)+'.'+now.getMonth()+'.'+now.getDate());
+  res += getHeader('Player1', p1);
+  res += getHeader('Player2', p2);
+  res += getHeader('Size', board.size);
+  res += getHeader('Result', board.result);
+  res += '\r\n';
+
+  var count=1;
+
+  $('#moveslist tr').each(function() {
+    $('td', this).each(function() {
+      var val = $(this).text();
+      res += val;
+
+      if(count%3 === 0)
+        res += '\r\n';
+      else
+        res += ' ';
+
+      count++;
+    })
+  });
+  $('#download_notation').attr('href', 'data:text/plain;charset=utf-8,'+encodeURIComponent(res));
+  console.log('res='+res);
+}
+
+function showPrivacyPolicy() {
+    $('#help-modal').modal('hide');
+    $('#privacy-modal').modal('show');
+}

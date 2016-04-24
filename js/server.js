@@ -256,6 +256,7 @@ var server = {
                 document.title = "Tak";
                 var spl = e.split(" ");
                 board.scratch = true;
+                board.result = spl[2];
                 board.notate(spl[2]);
 
                 var msg = "Game over <span class='bold'>" + spl[2] + "</span><br>";
@@ -291,7 +292,6 @@ var server = {
                   }
                 }
 
-                alert("info", msg);
                 document.getElementById("scratchsize").disabled = false;
                 stopTime();
 
@@ -305,16 +305,19 @@ var server = {
                 document.title = "Tak";
                 board.scratch = true;
 
-                if(board.mycolor === "white")
+                if(board.mycolor === "white"){
                   board.notate("1-0");
-                else
+                  board.result = "1-0";
+                }
+                else {
                   board.notate("0-1");
+                  board.result = "0-1";
+                }
 
                 var msg = "Game abandoned by " + spl[2] + ".";
                 if(!board.observing)
                   msg += " You win!";
 
-                alert("info", msg);
                 document.getElementById("scratchsize").disabled = false;
                 stopTime();
 
