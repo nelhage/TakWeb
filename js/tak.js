@@ -150,7 +150,7 @@ function onDocumentMouseDown(e) {
     else {
       if(board.movecount !== board.moveshown)
         return;
-      board.leftclick();
+      board.leftclick(e);
     }
 }
 function onDocumentMouseUp(e) {
