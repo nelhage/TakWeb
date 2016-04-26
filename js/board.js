@@ -40,6 +40,8 @@ var white_caps_tex_name = 'images/pieces/white_simple_caps.png';
 var black_caps_tex_name = 'images/pieces/black_simple_caps.png';
 var table_tex_name = 'images/wooden_table.png';
 
+THREE.ImageUtils.crossOrigin = '';
+
 var board = {
     size: 0,
     totcaps: 0,
@@ -1188,8 +1190,7 @@ var board = {
         var blackCaps = [];
         while (piece = this.piece_objects.pop())
         {
-          if (piece.onsquare)
-            continue;
+          piece.onsquare = false;
           this.flatten(piece);
           if (piece.iswhitepiece) {
             if (piece.iscapstone)
@@ -1207,20 +1208,6 @@ var board = {
         for (var i = 0; i < this.size; i++) {
             for (var j = 0; j < this.size; j++) {
                 while (piece = this.sq[i][j].pop()) {
-                    piece.onsquare = false;
-                    this.flatten(piece);
-                    if (piece.iswhitepiece) {
-                      if (piece.iscapstone)
-                        whiteCaps.push(piece);
-                      else
-                        whitePieces.push(piece);
-                    }
-                    else {
-                      if (piece.iscapstone)
-                        blackCaps.push(piece);
-                      else
-                        blackPieces.push(piece);
-                    }
                 }
             }
         }

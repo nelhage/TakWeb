@@ -30,10 +30,11 @@ var server = {
         var proto='ws://';
         if (window.location.protocol === "https:")
             proto='wss://';
-        this.connection = new WebSocket(proto+url, "binary");
+        this.connection = new WebSocket(proto + url, "binary");
         board.server = this;
         this.connection.onerror = function (e) {
-            this.output("Connection error: " + e);
+            output("Connection error: " + e);
+            console.log(e);
         };
         this.connection.onmessage = function (e) {
             var blob = e.data;
