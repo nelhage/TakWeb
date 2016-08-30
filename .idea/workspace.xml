@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b6f01-ebc5-4ba6-b941-9fc4e3731279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/body.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/alertBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/createGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/gameOver.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/helpNotice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/loginWindow.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/privacyNotice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/scriptWrapper.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/view/chat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/view/hudControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/view/navBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/view/notation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/engine/textures.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/interface/alertbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/thirdparty/three/helvetiker_regular.typeface.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/thirdparty/three/three.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/tss/tss.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tss/test.tss.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/game.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/helvetiker_regular.typeface.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_caps.png" afterPath="$PROJECT_DIR$/images/pieces/black_blackwood_caps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_caps.png" afterPath="$PROJECT_DIR$/images/pieces/black_livingwood_caps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pieces/black_pietersite_caps.png" afterPath="$PROJECT_DIR$/images/pieces/black_pietersite_caps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pieces/white_bone_caps.png" afterPath="$PROJECT_DIR$/images/pieces/white_bone_caps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pieces/white_lightwood_caps.png" afterPath="$PROJECT_DIR$/images/pieces/white_lightwood_caps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tak.css" afterPath="$PROJECT_DIR$/css/tak.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/OrbitControls.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/OrbitControls.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/board.js" afterPath="$PROJECT_DIR$/js/logic/board.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/bootstrap-tour.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/bootstrap-tour.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/geometries.js" afterPath="$PROJECT_DIR$/js/engine/geometries.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/linkify-string.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/linkify-string.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/linkify.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/linkify.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/playtaktour.js" afterPath="$PROJECT_DIR$/js/interface/playtaktour.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/logic/server.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/settings.js" afterPath="$PROJECT_DIR$/js/interface/settings.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/tak.js" afterPath="$PROJECT_DIR$/js/interface/events.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/textures.js" afterPath="$PROJECT_DIR$/js/engine/canvas.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/three.min.js" afterPath="$PROJECT_DIR$/js/thirdparty/three/three.min.old.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TakWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -369,20 +327,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TakWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TakWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -882,7 +826,7 @@
       <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.275" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="183" y="724" width="353" height="177" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18035714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
