@@ -2,140 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b6f01-ebc5-4ba6-b941-9fc4e3731279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/script.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/logic/game.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/classic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/css/dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/logic/test.game.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap-tour.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/scriptWrapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/view/hudControl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/interface/playtaktour.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/Blue_question_mark_icon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/blacktile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/blacktile3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/blacktile4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/board.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/bus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/circle_any.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/circle_black.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/circle_white.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/flag.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/hand-i-offered.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/hand-other-offered.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_account_box_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_fast_forward_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_fast_rewind_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_file_download_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_help_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_keyboard_arrow_left_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_keyboard_arrow_right_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_menu_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_perm_identity_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_screen_rotation_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_settings_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_volume_mute_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_volume_up_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_zoom_in_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ic_zoom_out_black_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/irequestedundo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/loadtpn.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/offer-hand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/otherrequestedundo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/player-black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/player-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/requestundo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/users.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/whitetile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/whitetile3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/whitetile4.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TSS_README.md" afterPath="$PROJECT_DIR$/TSS_README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/body.html" afterPath="$PROJECT_DIR$/html/body.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/alertBox.html" afterPath="$PROJECT_DIR$/html/overlay/alertBox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/createGame.html" afterPath="$PROJECT_DIR$/html/overlay/createGame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/gameOver.html" afterPath="$PROJECT_DIR$/html/overlay/gameOver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/helpNotice.html" afterPath="$PROJECT_DIR$/html/overlay/helpNotice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/loginWindow.html" afterPath="$PROJECT_DIR$/html/overlay/loginWindow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/privacyNotice.html" afterPath="$PROJECT_DIR$/html/overlay/privacyNotice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/overlay/settings.html" afterPath="$PROJECT_DIR$/html/overlay/settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/view/chat.html" afterPath="$PROJECT_DIR$/html/view/chat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/view/navBar.html" afterPath="$PROJECT_DIR$/html/view/navBar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/view/notation.html" afterPath="$PROJECT_DIR$/html/view/notation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/engine/canvas.js" afterPath="$PROJECT_DIR$/js/engine/canvas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/engine/geometries.js" afterPath="$PROJECT_DIR$/js/engine/geometries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/alertbox.js" afterPath="$PROJECT_DIR$/js/interface/alertbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/events.js" afterPath="$PROJECT_DIR$/js/interface/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/settings.js" afterPath="$PROJECT_DIR$/js/interface/settings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/board.js" afterPath="$PROJECT_DIR$/js/logic/board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/server.js" afterPath="$PROJECT_DIR$/js/logic/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/all.js" afterPath="$PROJECT_DIR$/test/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/tss/test.tss.js" afterPath="$PROJECT_DIR$/test/tss/test.tss.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audio/chime.mp3" afterPath="$PROJECT_DIR$/resources/audio/chime.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audio/chime.ogg" afterPath="$PROJECT_DIR$/resources/audio/chime.ogg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audio/move.mp3" afterPath="$PROJECT_DIR$/resources/audio/move.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audio/move.ogg" afterPath="$PROJECT_DIR$/resources/audio/move.ogg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/resources/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/tak.css" afterPath="$PROJECT_DIR$/resources/css/tak.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_black-ornate.png" afterPath="$PROJECT_DIR$/resources/images/board/black_black-ornate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_blue-ornate.png" afterPath="$PROJECT_DIR$/resources/images/board/black_blue-ornate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_blue-velvet.png" afterPath="$PROJECT_DIR$/resources/images/board/black_blue-velvet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_dark-gem.png" afterPath="$PROJECT_DIR$/resources/images/board/black_dark-gem.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_green-velvet.png" afterPath="$PROJECT_DIR$/resources/images/board/black_green-velvet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_red-ornate.png" afterPath="$PROJECT_DIR$/resources/images/board/black_red-ornate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_red-velvet.png" afterPath="$PROJECT_DIR$/resources/images/board/black_red-velvet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/black_simple.png" afterPath="$PROJECT_DIR$/resources/images/board/black_simple.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/white_beige-ornate.png" afterPath="$PROJECT_DIR$/resources/images/board/white_beige-ornate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/white_ornate.png" afterPath="$PROJECT_DIR$/resources/images/board/white_ornate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/white_sand-velvet.png" afterPath="$PROJECT_DIR$/resources/images/board/white_sand-velvet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/white_simple.png" afterPath="$PROJECT_DIR$/resources/images/board/white_simple.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/board/white_white-velvet.png" afterPath="$PROJECT_DIR$/resources/images/board/white_white-velvet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_med.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood_med.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_med_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood_med_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_med_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood_med_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_blackwood_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_blackwood_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_bluemarble.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_bluemarble.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_bluemarble_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_bluemarble_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_bluemarble_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_bluemarble_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_dark.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood_dark.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_dark_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood_dark_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_dark_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood_dark_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_livingwood_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_livingwood_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_pietersite.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_pietersite.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_pietersite_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_pietersite_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_pietersite_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_pietersite_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_simple.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_simple.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_simple_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_simple_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_simple_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_simple_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_wood.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/black_wood.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_wood_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_wood_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/black_wood_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/black_wood_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_bone.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_bone.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_bone_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_bone_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_bone_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_bone_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_chipped.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_chipped.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_chipped_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_chipped_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_chipped_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_chipped_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_coral.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_coral.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_coral_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_coral_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_coral_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_coral_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_lightwood.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_lightwood.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_lightwood_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_lightwood_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_lightwood_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_lightwood_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_simple.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_simple.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_simple_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_simple_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_simple_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_simple_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_whitemarble.jpg" afterPath="$PROJECT_DIR$/resources/images/pieces/white_whitemarble.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_whitemarble_caps.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_whitemarble_caps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pieces/white_whitemarble_pieces.png" afterPath="$PROJECT_DIR$/resources/images/pieces/white_whitemarble_pieces.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/wooden_table.png" afterPath="$PROJECT_DIR$/resources/images/wooden_table.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/thirdparty/three/helvetiker_regular.typeface.json" afterPath="$PROJECT_DIR$/resources/helvetiker_regular.typeface.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/tss/tss.js" afterPath="$PROJECT_DIR$/js/logic/tss/tss.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/dark.css" afterPath="$PROJECT_DIR$/resources/css/dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/tak.css" afterPath="$PROJECT_DIR$/resources/css/tak.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/icons_inv/circle_any.svg" afterPath="$PROJECT_DIR$/resources/images/icons_inv/circle_any.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/icons_inv/circle_black.svg" afterPath="$PROJECT_DIR$/resources/images/icons_inv/circle_black.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/icons_inv/circle_white.svg" afterPath="$PROJECT_DIR$/resources/images/icons_inv/circle_white.svg" />
     </list>
     <ignored path="TakWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,18 +39,8 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/logic/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/logic/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="4216">
+              <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -184,18 +49,8 @@
       <file leaf-file-name="events.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/interface/events.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="409" column="6" selection-start-line="409" selection-start-column="6" selection-end-line="409" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="4386">
+              <caret line="258" column="19" selection-start-line="258" selection-start-column="19" selection-end-line="258" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -204,8 +59,71 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+            <state relative-caret-position="714">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dark.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/dark.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navBar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/view/navBar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="41" column="37" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#4;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/logic/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3862">
+              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="board.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/logic/board.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="1015" column="22" selection-start-line="1015" selection-start-column="22" selection-end-line="1015" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tak.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="230" column="14" selection-start-line="230" selection-start-column="14" selection-end-line="230" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -270,18 +188,18 @@
         <option value="$PROJECT_DIR$/js/logic/game.js" />
         <option value="$PROJECT_DIR$/html/overlay/settings.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/html/view/navBar.html" />
-        <option value="$PROJECT_DIR$/js/logic/board.js" />
-        <option value="$PROJECT_DIR$/js/logic/server.js" />
         <option value="$PROJECT_DIR$/html/view/notation.html" />
         <option value="$PROJECT_DIR$/html/view/chat.html" />
-        <option value="$PROJECT_DIR$/resources/css/tak.css" />
         <option value="$PROJECT_DIR$/html/scriptInvoke.html" />
         <option value="$PROJECT_DIR$/html/script.html" />
         <option value="$PROJECT_DIR$/html/body.html" />
-        <option value="$PROJECT_DIR$/resources/css/dark.css" />
         <option value="$PROJECT_DIR$/js/interface/events.js" />
         <option value="$PROJECT_DIR$/js/interface/settings.js" />
+        <option value="$PROJECT_DIR$/html/view/navBar.html" />
+        <option value="$PROJECT_DIR$/resources/css/dark.css" />
+        <option value="$PROJECT_DIR$/js/logic/server.js" />
+        <option value="$PROJECT_DIR$/resources/css/tak.css" />
+        <option value="$PROJECT_DIR$/js/logic/board.js" />
       </list>
     </option>
   </component>
@@ -374,6 +292,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production" />
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -636,27 +575,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production" />
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests" />
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -1024,11 +942,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26123303" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28214285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="183" y="724" width="353" height="177" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2809524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="183" y="724" width="353" height="177" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1040,6 +957,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1220,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,35 +1148,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/classic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/view/navBar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="498" column="54" selection-start-line="498" selection-start-column="54" selection-end-line="498" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/overlay/alertBox.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,15 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2856">
           <caret line="168" column="79" selection-start-line="168" selection-start-column="64" selection-end-line="168" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,89 +1166,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/scriptInvoke.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/dark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/html/scriptInvoke.html" />
     <entry file="file://$PROJECT_DIR$/html/view/chat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4216">
+          <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/script.html">
+    <entry file="file://$PROJECT_DIR$/resources/css/classic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/server.js">
+    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="714">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/interface/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="409" column="6" selection-start-line="409" selection-start-column="6" selection-end-line="409" selection-end-column="77" />
+        <state relative-caret-position="4386">
+          <caret line="258" column="19" selection-start-line="258" selection-start-column="19" selection-end-line="258" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
+    <entry file="file://$PROJECT_DIR$/resources/css/dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+        <state relative-caret-position="560">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/view/navBar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="372">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#li#0;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#4;n#li#0;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3862">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="230" column="14" selection-start-line="230" selection-start-column="14" selection-end-line="230" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/script.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="1015" column="22" selection-start-line="1015" selection-start-column="22" selection-end-line="1015" selection-end-column="22" />
           <folding />
         </state>
       </provider>
