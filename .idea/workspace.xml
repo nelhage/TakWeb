@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b6f01-ebc5-4ba6-b941-9fc4e3731279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/overlay/playerContextMenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/body.html" afterPath="$PROJECT_DIR$/html/body.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/alertbox.js" afterPath="$PROJECT_DIR$/js/interface/alertbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/events.js" afterPath="$PROJECT_DIR$/js/interface/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/view/chat.html" afterPath="$PROJECT_DIR$/html/view/chat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/server.js" afterPath="$PROJECT_DIR$/js/logic/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/serverops/chat.js" afterPath="$PROJECT_DIR$/js/logic/serverops/chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/style/dark.css" afterPath="$PROJECT_DIR$/resources/css/style/dark.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/tak.css" afterPath="$PROJECT_DIR$/resources/css/tak.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/icons_inv/otherrequestedundo.svg" afterPath="$PROJECT_DIR$/resources/images/icons_inv/otherrequestedundo.svg" />
     </list>
     <ignored path="TakWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,28 +36,58 @@
       <file leaf-file-name="tak.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="327" column="6" selection-start-line="327" selection-start-column="1" selection-end-line="327" selection-end-column="6" />
+            <state relative-caret-position="140">
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="134" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="body.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/body.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dark.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dark.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/style/dark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+            <state relative-caret-position="199">
+              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/view/chat.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/logic/serverops/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/logic/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3026">
+              <caret line="178" column="77" selection-start-line="178" selection-start-column="77" selection-end-line="178" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -129,15 +155,15 @@
         <option value="$PROJECT_DIR$/resources/css/chat/all.css" />
         <option value="$PROJECT_DIR$/resources/css/chat/global.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/html/view/chat.html" />
         <option value="$PROJECT_DIR$/html/overlay/playerContextMenu.html" />
-        <option value="$PROJECT_DIR$/js/logic/serverops/chat.js" />
         <option value="$PROJECT_DIR$/js/interface/events.js" />
-        <option value="$PROJECT_DIR$/resources/css/tak.css" />
-        <option value="$PROJECT_DIR$/js/logic/server.js" />
         <option value="$PROJECT_DIR$/html/body.html" />
         <option value="$PROJECT_DIR$/js/interface/alertbox.js" />
+        <option value="$PROJECT_DIR$/html/view/chat.html" />
+        <option value="$PROJECT_DIR$/js/logic/server.js" />
+        <option value="$PROJECT_DIR$/resources/css/tak.css" />
         <option value="$PROJECT_DIR$/resources/css/style/dark.css" />
+        <option value="$PROJECT_DIR$/js/logic/serverops/chat.js" />
       </list>
     </option>
   </component>
@@ -231,6 +257,9 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -534,9 +563,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
@@ -1139,13 +1165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1015" column="22" selection-start-line="1015" selection-start-column="22" selection-end-line="1015" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/view/notation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1173,14 +1192,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interface/alertbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interface/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3203">
+          <caret line="419" column="5" selection-start-line="419" selection-start-column="5" selection-end-line="419" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/overlay/playerContextMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="1522" column="60" selection-start-line="1522" selection-start-column="57" selection-end-line="1522" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/view/chat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        <state relative-caret-position="255">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1195,82 +1264,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/serverops/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="126" column="31" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/logic/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="274" column="33" selection-start-line="274" selection-start-column="33" selection-end-line="274" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="3026">
+          <caret line="178" column="77" selection-start-line="178" selection-start-column="77" selection-end-line="178" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="327" column="6" selection-start-line="327" selection-start-column="1" selection-end-line="327" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/alertbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3203">
-          <caret line="419" column="5" selection-start-line="419" selection-start-column="5" selection-end-line="419" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/overlay/playerContextMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="140">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="134" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/style/dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+        <state relative-caret-position="199">
+          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/serverops/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
           <folding />
         </state>
       </provider>
