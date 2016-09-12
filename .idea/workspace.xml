@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="307b6f01-ebc5-4ba6-b941-9fc4e3731279" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/events.js" afterPath="$PROJECT_DIR$/js/interface/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/interface/settings.js" afterPath="$PROJECT_DIR$/js/interface/settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/board.js" afterPath="$PROJECT_DIR$/js/logic/board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/serverops/chat.js" afterPath="$PROJECT_DIR$/js/logic/serverops/chat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/tak.css" afterPath="$PROJECT_DIR$/resources/css/tak.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logic/tss/tss.js" afterPath="$PROJECT_DIR$/js/logic/tss/tss.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/style/dark.css" afterPath="$PROJECT_DIR$/resources/css/style/dark.css" />
     </list>
     <ignored path="TakWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +38,7 @@
       <file leaf-file-name="tak.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="867">
               <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
@@ -43,8 +48,8 @@
       <file leaf-file-name="dark.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/style/dark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="272">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -53,8 +58,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state relative-caret-position="1496">
+              <caret line="88" column="87" selection-start-line="88" selection-start-column="87" selection-end-line="88" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/logic/board.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6579">
+              <caret line="387" column="33" selection-start-line="387" selection-start-column="33" selection-end-line="387" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -63,8 +78,8 @@
       <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/logic/serverops/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="188" column="28" selection-start-line="188" selection-start-column="28" selection-end-line="188" selection-end-column="28" />
+            <state relative-caret-position="366">
+              <caret line="215" column="24" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -90,7 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/tss/tss.test.js" />
         <option value="$PROJECT_DIR$/test/test.all.js" />
         <option value="$PROJECT_DIR$/js/engine/textures.js" />
         <option value="$PROJECT_DIR$/tss/tss_def.tss" />
@@ -125,21 +139,22 @@
         <option value="$PROJECT_DIR$/html/view/notation.html" />
         <option value="$PROJECT_DIR$/html/scriptInvoke.html" />
         <option value="$PROJECT_DIR$/html/script.html" />
-        <option value="$PROJECT_DIR$/js/logic/board.js" />
         <option value="$PROJECT_DIR$/resources/css/dark.css" />
-        <option value="$PROJECT_DIR$/js/interface/settings.js" />
         <option value="$PROJECT_DIR$/resources/css/chat/all.css" />
         <option value="$PROJECT_DIR$/resources/css/chat/global.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/html/overlay/playerContextMenu.html" />
-        <option value="$PROJECT_DIR$/js/interface/events.js" />
         <option value="$PROJECT_DIR$/html/body.html" />
         <option value="$PROJECT_DIR$/js/interface/alertbox.js" />
-        <option value="$PROJECT_DIR$/resources/css/style/dark.css" />
         <option value="$PROJECT_DIR$/html/view/navBar.html" />
         <option value="$PROJECT_DIR$/js/logic/server.js" />
         <option value="$PROJECT_DIR$/html/view/chat.html" />
         <option value="$PROJECT_DIR$/resources/css/tak.css" />
+        <option value="$PROJECT_DIR$/resources/css/style/dark.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/logic/tss/tss.js" />
+        <option value="$PROJECT_DIR$/js/interface/events.js" />
+        <option value="$PROJECT_DIR$/js/logic/board.js" />
+        <option value="$PROJECT_DIR$/js/interface/settings.js" />
         <option value="$PROJECT_DIR$/js/logic/serverops/chat.js" />
       </list>
     </option>
@@ -233,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Production" />
@@ -558,7 +574,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -916,7 +931,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1057,13 +1072,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/view/hudControl.html" />
     <entry file="file://$PROJECT_DIR$/resources/css/bootstrap-tour.min.css" />
-    <entry file="file://$PROJECT_DIR$/js/engine/geometries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/overlay/helpNotice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1085,24 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/tss/tss.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7123">
-          <caret line="419" column="32" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/tss/test.tss.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1165,24 +1159,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/interface/alertbox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/interface/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3203">
-          <caret line="419" column="5" selection-start-line="419" selection-start-column="5" selection-end-line="419" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1214,21 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/view/chat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1236,26 +1201,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/style/dark.css">
+    <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        <state relative-caret-position="867">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/tak.css">
+    <entry file="file://$PROJECT_DIR$/resources/css/style/dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/engine/geometries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/tss/tss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3084">
+          <caret line="290" column="14" selection-start-line="290" selection-start-column="14" selection-end-line="290" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tss/test.tss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="157" column="23" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interface/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/interface/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="153" column="22" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/logic/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6579">
+          <caret line="387" column="33" selection-start-line="387" selection-start-column="33" selection-end-line="387" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="87" selection-start-line="88" selection-start-column="87" selection-end-line="88" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/logic/serverops/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="188" column="28" selection-start-line="188" selection-start-column="28" selection-end-line="188" selection-end-column="28" />
+        <state relative-caret-position="366">
+          <caret line="215" column="24" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
           <folding />
         </state>
       </provider>
