@@ -57,6 +57,7 @@ function init()
   highlighter.rotateX(Math.PI / 2);
 
   canvas.addEventListener('mousedown', onDocumentMouseDown, false);
+  canvas.addEventListener('touchstart', onDocumentTouchStart, false);
   canvas.addEventListener('mouseup', onDocumentMouseUp, false);
   canvas.addEventListener('mousemove', onDocumentMouseMove, false);
 
@@ -126,6 +127,16 @@ function onDocumentMouseMove(e)
   mouse.y = -(y / canvas.height) * 2 + 1;
 
   board.mousemove();
+}
+
+function onDocumentTouchStart(e)
+{
+  board.onDocumentMouseDown(e);
+}
+
+function onDocumentTouchEnd(e)
+{
+  board.onDocumentMouseUp(e);
 }
 
 function onDocumentMouseDown(e)
