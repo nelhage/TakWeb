@@ -26,8 +26,7 @@ var server = {
           return;
       }
       var url = window.location.host;
-      //if (url.indexOf("playtak") > -1)
-          url = 'playtak.com:3000';
+          url = 'www.playtak.com/ws';
       var proto='ws://';
       if (window.location.protocol === "https:")
           proto='wss://';
