@@ -148,7 +148,21 @@
   </head>
 
   <!-- Body -->
-  <body ng-app="">
+  <body ng-app="TakWebApp">
+    <script type='text/javascript'>
+      TakWeb = angular.module('TakWebApp', []);
+      TakWeb.controller('MainCtrl', function($scope) {
+        var count = 12;
+        var loaded = 0;
+        $scope.$on('$includeContentLoaded', function(event, templateName) {
+          console.log('loaded ', templateName);
+          ++loaded;
+          if(loaded == count) {
+            doInit();
+          }
+        });
+      });
+    </script>
     <div ng-include="'html/body.html'"></div>
   </body>
 </html>
